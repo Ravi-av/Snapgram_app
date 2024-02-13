@@ -16,9 +16,11 @@ import AuthLayout from "./_auth/AuthLayout";
 // import RootLayout from "./_root/RootLayout   ";
 import SignupForm from "./_auth/forms/SignupForm";
 import SigninForm from "./_auth/forms/SigninForm";
-// import { Toaster } from "@/components/ui/toaster";
-
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
+
+
+
 import { Home } from "./_root/pages";
 import RootLayout from "./_root/RootLayout";
 
@@ -46,7 +48,7 @@ const App = () => {
         </Route>
       </Routes>
 
-      {/* <Toaster /> */}
+      <Toaster /> 
       
     </main>
   );
