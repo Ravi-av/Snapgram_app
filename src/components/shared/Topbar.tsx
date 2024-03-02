@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import { Link, useNavigate } from "react-router-dom"
 import { Button } from "../ui/button"
-import { useSignOutAccount } from "@/lib/react-query/queriesAndMutations";
+
 import { useUserContext } from '@/context/AuthContext';
+import { useSignOutAccount } from '@/lib/react-query/queryAndMutations';
 
 
 
@@ -32,7 +33,7 @@ const Topbar = () => {
                         <img src="/assets/icons/logout.svg" alt="logout" />
                     </Button>
                     <Link to ={`/profile/${user.id}`}className="flex-center gap-3">
-                        <img src={user.imageUrl || '/assets/images/profile-placeholder.svg'} 
+                        <img src={user.imageUrl || '/assets/icons/profile-placeholder.svg'} 
                         alt="profile"
                         className="h-8 w-8 rounded-full"
                          />
