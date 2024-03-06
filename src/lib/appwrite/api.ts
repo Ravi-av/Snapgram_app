@@ -371,7 +371,7 @@ export async function likePost(postId: string, likesArray: string[]) {
 }
 
 // ============================== SAVE POST
-export async function savePost( postId?: string ,userId?: string,) {
+export async function savePost(userId: string, postId: string) {
   try {
     const updatedPost = await databases.createDocument(
       appwriteConfig.databaseId,
@@ -396,7 +396,7 @@ export async function deleteSavedPost(savedRecordId: string) {
     const statusCode = await databases.deleteDocument(
       appwriteConfig.databaseId,
       appwriteConfig.savesCollectionId,
-      savedRecordId,
+      savedRecordId
     );
 
     if (!statusCode) throw Error;
